@@ -1,0 +1,2 @@
+ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
+ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
