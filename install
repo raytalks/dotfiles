@@ -1,2 +1,5 @@
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
+
+git config --global user.email "rayta.van.rijswijk@gmail.com"
+git config --global user.name "Rayta van Rijswijk"
