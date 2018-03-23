@@ -1,5 +1,6 @@
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
+ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
 
 git config --global user.email "rayta.van.rijswijk@gmail.com"
 git config --global user.name "Rayta van Rijswijk"
