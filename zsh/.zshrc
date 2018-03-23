@@ -2,6 +2,7 @@ ZSH_DIR="$HOME/.zsh" # Path to my custom ZSH directory
 source "$ZSH_DIR/git.zsh"
 source "$ZSH_DIR/prompt.zsh"
 source "$ZSH_DIR/alias.zsh"
+source "$ZSH_DIR/history.zsh"
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
