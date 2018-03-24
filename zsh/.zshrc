@@ -4,8 +4,9 @@ source "$ZSH_DIR/prompt.zsh"
 source "$ZSH_DIR/alias.zsh"
 source "$ZSH_DIR/history.zsh"
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Language
 export LANG=en_US.UTF-8
