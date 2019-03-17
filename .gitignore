@@ -4,4 +4,6 @@
 Icon
 ._*
 .netrwhist
+vim/.vim/plugged
+vim/.vim/autoload/plug.vim
 zsh/.zsh/completions.zsh

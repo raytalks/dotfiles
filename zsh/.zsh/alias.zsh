@@ -24,3 +24,7 @@ alias br="be rspec"
 alias rs="rails s"
 alias rc="rails c"
 alias rss="rs -p "
+
+function mvim {
+  /Applications/MacVim.app/Contents/bin/mvim $1
+}

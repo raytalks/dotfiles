@@ -1,6 +1,15 @@
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
+ln -nfs "$(pwd)/vim/.vimrc"             "$HOME/.vimrc"
+ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
+ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
+ln -nfs "$(pwd)/vim/.vim"               "$HOME/.config/nvim"
+ln -nfs "$(pwd)/.ignore_global"         "$HOME/.ignore"
 
 git config --global user.email "rayta.van.rijswijk@gmail.com"
 git config --global user.name "Rayta van Rijswijk"
+
+for file in ./powerline-fonts/Meslo/*.otf; do
+  cp -f "$file" "$HOME/Library/Fonts/"
+done
