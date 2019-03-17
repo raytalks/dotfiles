@@ -28,7 +28,9 @@ Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
-Plug 'ervandew/supertab'
+Plug 'sirver/ultisnips', { 'commit': '423f264' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'lifepillar/vim-mucomplete', { 'commit': '8e1ddf51f47cd5351cb37a622c5eec1c9c6d2130' }
 
 call plug#end()
 
@@ -52,7 +54,7 @@ set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
 set spelllang=en,nl
-set spellfile=$HOME/.vim/spell/en.utf-8.add,$HOME/.vim/spell/nl.utf-8.add
+set spellfile=$HOME/.vim/spell/en.utf-8.add
 set complete+=kspell
 
 set wrap                          " Turn on line wrapping.

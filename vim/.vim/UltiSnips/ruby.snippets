@@ -1,0 +1,259 @@
+# Ruby snippets
+# Modified version from honza/vim-snippets
+# Original source: https://github.com/honza/vim-snippets/blob/b988fb9576db2990eb96db14eee2e0f5ec4841e4/UltiSnips/ruby.snippets
+
+priority -50
+
+snippet "^#!" "#!/usr/bin/env ruby" r
+#!/usr/bin/env ruby
+$0
+endsnippet
+
+snippet gem "gem"
+gem "${1:name}"
+endsnippet
+
+snippet # "Wrap in #{code}" i
+#{${0:${VISUAL:code}}}
+endsnippet
+
+snippet if "if-statement"
+if ${1:condition}
+  ${0:${VISUAL:code}}
+end
+endsnippet
+
+snippet else "else-statement"
+else
+  ${0:${VISUAL:code}}
+endsnippet
+
+snippet elsif "elsif-statement"
+elsif ${1:condition}
+  ${0:${VISUAL:code}}
+endsnippet
+
+snippet unless "unless-statement"
+unless ${1:condition}
+  ${0:${VISUAL:code}}
+end
+endsnippet
+
+snippet pry "binding.pry"
+require "pry"; binding.pry
+endsnippet
+
+# attribute helpers
+snippet "\b(r|attr)" "attr_reader :<attr_names>" r
+attr_reader :${0:attr_names}
+endsnippet
+
+snippet "\b(w|attr)" "attr_writer :<attr_names>" r
+attr_writer :${0:attr_names}
+endsnippet
+
+snippet "\b(rw|attr)" "attr_accessor :<attr_names>" r
+attr_accessor :${0:attr_names}
+endsnippet
+
+# Methods
+snippet def "def <name>..."
+def ${1:method_name}${3:(${2:args})}
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet defi "def initialize..."
+def initialize${2:(${1:args})}
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet alias "alias :<new_name> :<old_name>"
+alias :${1:new_name} :${2:old_name}
+endsnippet
+
+# Mapping
+snippet "(\S+)\.mapp" ".map { |<element>| <block> }" r
+`!p snip.rv=match.group(1)`.map { |${1:`!p
+element_name = match.group(1).lstrip('$@')
+ematch = re.search("([A-Za-z][A-Za-z0-9_]+?)s?[^A-Za-z0-9_]*?$", element_name)
+try:
+  wmatch = re.search("([A-Za-z][A-Za-z0-9_]+)$", ematch.group(1))
+  snip.rv = wmatch.group(1).lower()
+except:
+  snip.rv = 'element'
+`}| $0 }
+endsnippet
+
+snippet "(\S+)\.map" ".map do |<element>| <block> end" r
+`!p snip.rv=match.group(1)`.map do |${1:`!p
+element_name = match.group(1).lstrip('$@')
+ematch = re.search("([A-Za-z][A-Za-z0-9_]+?)s?[^A-Za-z0-9_]*?$", element_name)
+try:
+  wmatch = re.search("([A-Za-z][A-Za-z0-9_]+)$", ematch.group(1))
+  snip.rv = wmatch.group(1).lower()
+except:
+  snip.rv = 'element'
+`}|
+  $0
+end
+endsnippet
+
+# Looping
+snippet "(\S+)\.each" ".each do |<element>| <block> end" r
+`!p snip.rv=match.group(1)`.each do |${1:`!p
+element_name = match.group(1).lstrip('$@')
+ematch = re.search("([A-Za-z][A-Za-z0-9_]+?)s?[^A-Za-z0-9_]*?$", element_name)
+try:
+  wmatch = re.search("([A-Za-z][A-Za-z0-9_]+)$", ematch.group(1))
+  snip.rv = wmatch.group(1).lower()
+except:
+  snip.rv = 'element'
+`}|
+  $0
+end
+endsnippet
+
+# Blocks
+snippet do "do |<key>| ... end" i
+do |${1:args}|
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet doo "do ... end" i
+do
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet begin "begin ... rescue ... end"
+begin
+  $1
+rescue
+  $0
+end
+endsnippet
+
+snippet rescue
+rescue ${1:Exception }=> e
+  puts e.message
+  puts e.backtrace.inspect
+  ${0:# Rescue}
+endsnippet
+
+snippet "\b(case|sw(itch)?)" "case <variable> when <expression> ... end" r
+case ${1:variable}
+when ${2:expression}
+$0
+end
+endsnippet
+
+# Classes
+snippet class "class <ClassName> def initialize ... end end"
+class ${1:ClassName}
+  def initialize(${2:*args})
+    $0
+  end
+end
+endsnippet
+
+# Modules
+snippet module "module"
+module ${1:ModuleName}
+  ${0:${VISUAL:# code}}
+end
+endsnippet
+
+# RSpec
+snippet "(setup|rspec)" "RSpec setup (setup)" r
+require "spec_helper"
+
+describe ${1:Model} do
+  ${0:${VISUAL:# code}}
+end
+endsnippet
+
+snippet "des(cribe)?" "RSpec describe block (des)" r
+describe "${1:.method_name}" do
+  ${0:${VISUAL:# assertions}}
+end
+endsnippet
+
+snippet "feat(ure)?" "RSpec feature block (feature)" r
+feature "${1:scenario}" do
+  ${0:${VISUAL:# assertions}}
+end
+endsnippet
+
+snippet "con(text)?" "RSpec context block (con)" r
+context "${1:when in context}" do
+  ${0:${VISUAL:# assertions}}
+end
+endsnippet
+
+snippet before "RSpec before block (before)"
+before do
+  ${0:${VISUAL:# before spec}}
+end
+endsnippet
+
+snippet after "RSpec after block (after)"
+after do
+  ${0:${VISUAL:# after spec}}
+end
+endsnippet
+
+snippet around "RSpec around block (around)"
+around do |example|
+  $0
+  example.run
+end
+endsnippet
+
+snippet "back(ground)?" "RSpec background block (background)" r
+background do
+  ${0:${VISUAL:# before feature spec}}
+end
+endsnippet
+
+snippet let "RSpec let block (let)"
+let(:${1:name}) { ${0:${VISUAL:object}} }
+endsnippet
+
+snippet let! "RSpec let! block (let!)"
+let!(:${1:name}) { ${0:${VISUAL:object}} }
+endsnippet
+
+snippet "sub(ject)?" "RSpec subject block (subject)" r
+subject { ${0:${VISUAL:object}} }
+endsnippet
+
+snippet it "RSpec it block (it)"
+it "${1:does something}" do
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet "sc(enario)?" "RSpec scenario block (scenario)" r
+scenario "${1:does something}" do
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet "ex(pect)?" "RSpec expect block (expect)" r
+expect(${1:subject}).to ${0:${VISUAL:assertion}}
+endsnippet
+
+snippet within "Capybara within block (within)"
+within "${1:selector}" do
+  ${0:${VISUAL:object}}
+end
+endsnippet
+
+snippet saop "save_and_open_page"
+save_and_open_page
+endsnippet
+
+# vim: set ts=2 sw=2 expandtab:
