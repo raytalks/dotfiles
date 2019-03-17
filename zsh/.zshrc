@@ -16,6 +16,17 @@ export LC_ALL=en_US.UTF-8
 
 export EDITOR="vim"
 
+# Custom .bin dir
+export PATH="$HOME/.bin:$PATH"
+
+## Disable Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
+
+## Load private credentials from ~/.extra file
+if [ -f ~/.extra ]; then
+  source ~/.extra
+fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/rayta/exec -1 /usr/local/bin/zsh/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rayta/exec -1 /usr/local/bin/zsh/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -31,3 +42,8 @@ fi
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+## Load FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -i --hidden --path-to-ignore ~/.ignore --no-color -g ""'

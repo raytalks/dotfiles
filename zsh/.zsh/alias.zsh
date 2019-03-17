@@ -17,8 +17,10 @@ alias gpl="git pull"
 alias gsl="git stash list"
 alias gsd="git stash drop"
 alias gsp="git stash pop"
-alias gl="git log --all --graph --decorate --oneline --simplify-by-decoration"
 
 # Bundle exec
 alias be="bundle exec"
 alias br="be rspec"
+alias rs="rails s"
+alias rc="rails c"
+alias rss="rs -p "
