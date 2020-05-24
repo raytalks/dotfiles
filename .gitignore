@@ -6,5 +6,4 @@ Icon
 .netrwhist
 vim/.vim/plugged
 vim/.vim/spell
-vim/.vim/autoload/plug.vim
 zsh/.zsh/completions.zsh
