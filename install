@@ -1,3 +1,8 @@
+# Configure shared config dir
+XDG_CONFIG_HOME="$HOME/.config"
+mkdir -p "$XDG_CONFIG_HOME"
+
+# Setup symlinks
 ln -nfs "$(pwd)/zsh/.zshrc"             "$HOME/.zshrc"
 ln -nfs "$(pwd)/zsh/.zsh"               "$HOME/.zsh"
 ln -nfs "$(pwd)/ruby/.irbrc"            "$HOME/.irbrc"
