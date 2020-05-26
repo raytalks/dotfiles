@@ -67,6 +67,8 @@ Now refresh you shell sessions either by opening a new pane or by running `reloa
 
 ### MacVim
 
+Install MacVim `https://macvim-dev.github.io/macvim/`
+
 ### fzf
 
 To install fzf, use the `/usr/local/opt/fzf/install` install script (listed in `brew info fzf` after installing it through `brew install fzf`).
