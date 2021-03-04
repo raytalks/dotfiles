@@ -13,8 +13,10 @@ ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.config/nvim"
 ln -nfs "$(pwd)/.ignore_global"         "$HOME/.ignore"
 
-git config --global user.email "rayta.van.rijswijk@gmail.com"
+git config --global user.email "me@rayta.nl"
 git config --global user.name "Rayta van Rijswijk"
+git config --global merge.ff only
+git config --global pull.ff only
 
 for file in ./powerline-fonts/Meslo/*.otf; do
   cp -f "$file" "$HOME/Library/Fonts/"
