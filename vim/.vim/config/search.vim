@@ -1,4 +1,4 @@
-let g:ackprg='ag --hidden --path-to-ignore ~/.ignore --vimgrep'
+let g:ackprg='rg --vimgrep'
 
 " Clear current search highlights
 nnoremap <leader>m :noh<CR>

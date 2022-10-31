@@ -26,7 +26,7 @@ Plug 'airblade/vim-gitgutter', { 'commit': 'b27ee4d' }
 Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestNearest', 'TestLast', 'TestSuite'] }
 Plug 'tomtom/tcomment_vim', { 'commit': 'f5ca095', 'on': 'TComment' }
 
-Plug '/usr/local/opt/fzf'
+Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Tags', 'Commands', 'Ag', 'History', 'Marks', 'Snippets'] }
 Plug 'sirver/ultisnips', { 'commit': '423f264' }
 Plug 'jiangmiao/auto-pairs'

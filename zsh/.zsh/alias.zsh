@@ -1,4 +1,5 @@
 alias reload="source $HOME/.zshrc"
+alias dotfiles="cd $HOME/raytavanrijswijk/dotfiles"
 
 # Git
 alias g="open -a gitx ."
@@ -14,6 +15,7 @@ alias gdw="git diff --ignore-all-space --word-diff=color"
 alias gpu="git push"
 alias gpo="git push origin"
 alias gpl="git pull"
+alias gsa='git stash --include-untracked'
 alias gsl="git stash list"
 alias gsd="git stash drop"
 alias gsp="git stash pop"

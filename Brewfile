@@ -7,7 +7,7 @@ brew "git"
 brew "zsh"
 brew "fzf"
 
-brew "the_silver_searcher"
+brew "ripgrep"
 brew "cloc"
 brew "tree"
 

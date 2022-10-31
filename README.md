@@ -67,7 +67,7 @@ Use vim-plug to install vim plugins.
 
 ### fzf
 
-To install fzf, use the `/usr/local/opt/fzf/install` install script (listed in `brew info fzf` after installing it through `brew install fzf`).
+To install fzf, use the install script listed in brew info fzf after installing it through brew install fzf.
 
 Say yes to "fuzzy auto-completion" and "key bindings".
 

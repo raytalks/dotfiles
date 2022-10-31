@@ -12,6 +12,8 @@ ln -nfs "$(pwd)/vim/.gvimrc"            "$HOME/.gvimrc"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.vim"
 ln -nfs "$(pwd)/vim/.vim"               "$HOME/.config/nvim"
 ln -nfs "$(pwd)/.ignore_global"         "$HOME/.ignore"
+mkdir -p "$XDG_CONFIG_HOME/ripgrep"
+ln -nfs "$(pwd)/.ripgreprc" "$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
 git config --global user.email "me@rayta.nl"
 git config --global user.name "Rayta van Rijswijk"
