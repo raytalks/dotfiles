@@ -49,13 +49,6 @@ brew update
 brew bundle
 ```
 
-### iTerm2
-
-* Set up `Load preferences from a custom folder or URL:` in the `General` section of `Preferences`. 
-* Select the directory `$DOTFILES/iterm2/`.
-* Run defaults `read com.googlecode.iterm2`.
-* Restart iTerm.
-
 ### ZSH file
 
 **Private credentials**
