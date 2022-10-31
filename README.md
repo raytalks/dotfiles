@@ -45,9 +45,8 @@ After installing Homebrew, ensure permissions are correct by running the followi
 
 ```
 brew update
-brew tap Homebrew/bundle
 
-brew bundle Brewfile
+brew bundle
 ```
 
 ### iTerm2
